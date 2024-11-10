@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .options-container {
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .option {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+
+        .option:hover {
+            transform: scale(1.05);
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .additional-info {
+            margin-top: 40px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .additional-info h2 {
+            color: #343a40;
+            margin-bottom: 10px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        .info-item button {
+            background-color: #28a745;
+        }
+
+        .info-item button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="options-container">
+        <h1>Select Your Travel Option</h1>
+        <div class="options">
+            <div class="option">
+                <h2>Train</h2>
+                <p>Book a train ticket to your desired destination.</p>
+                <button onclick="book('Train')">Book Train</button>
+            </div>
+            <div class="option">
+                <h2>Bus</h2>
+                <p>Book a bus ticket for your journey.</p>
+                <button onclick="book('Bus')">Book Bus</button>
+            </div>
+            <div class="option">
+                <h2>Flight</h2>
+                <p>Book a flight to your chosen location.</p>
+                <button onclick="book('Flight')">Book Flight</button>
+            </div>
+        </div>
+
+        <div class="additional-info">
+            <h2>Your Ticket Management</h2>
+            <div class="info-item">
+                <h3>Current Ticket</h3>
+                <p>No ticket booked yet.</p>
+                <button onclick="viewCurrentTicket()">View Current Ticket</button>
+            </div>
+            <div class="info-item">
+                <h3>Refund Status</h3>
+                <p>Refund not initiated.</p>
+                <button onclick="checkRefundStatus()">Check Refund Status</button>
+            </div>
+            <div class="info-item">
+                <h3>Cancel Ticket</h3>
+                <p>No active ticket to cancel.</p>
+                <button onclick="cancelTicket()">Cancel Ticket</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function book(option) {
+            alert('You have selected to book a ' + option);
+            // Here you can redirect to the respective booking page or perform booking actions
+        }
+
+        function viewCurrentTicket() {
+            alert('No current ticket to display.');
+        }
+
+        function checkRefundStatus() {
+            alert('You have not requested a refund.');
+        }
+
+        function cancelTicket() {
+            alert('No ticket to cancel.');
+        }
+    </script>
+</body>
+</html>

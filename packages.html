@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4a4a4a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .package {
+            background-color: white; /* White cards */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            width: calc(33% - 30px); /* Three cards per row */
+            overflow: hidden;
+            transition: transform 0.3s;
+            height: 500px;
+        }
+        .package:hover {
+            transform: translateY(-5px); /* Slight lift effect on hover */
+        }
+        .package img {
+            width: 100%;
+            height: auto;
+        }
+        .package-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .package-info h3 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #4a4a4a;
+        }
+        .package-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .package {
+                width: calc(50% - 30px); /* Two cards per row on smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .package {
+                width: 100%; /* One card per row on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel Packages</h1>
+    </header>
+    <div class="container">
+        <div class="package">
+            <img src="paris.jpg" alt="Paris">
+            <div class="package-info">
+                <h3>Paris</h3>
+                <p>Starting from $1200</p>
+            </div>
+        </div>
+        <div class="package">
+            <img src="maldives.jpg" alt="Maldives">
+            <div class="package-info">
+                <h3>Maldives</h3>
+                <p>Starting from $1500</p>
+            </div>
+        </div>
+        <div class="package">
+            <img src="new york.jpg" alt="New York">
+            <div class="package-info">
+                <h3>New York</h3>
+                <p>Starting from $900</p>
+            </div>
+        </div>
+        <div class="package">
+            <img src="tokyo.jpg" alt="Tokyo">
+            <div class="package-info">
+                <h3>Tokyo</h3>
+                <p>Starting from $1300</p>
+            </div>
+        </div>
+        <div class="package">
+            <img src="london.jpg" alt="London">
+            <div class="package-info">
+                <h3>London</h3>
+                <p>Starting from $1100</p>
+            </div>
+        </div>
+        <div class="package">
+            <img src="sydney.jpg" alt="Sydney">
+            <div class="package-info">
+                <h3>Sydney</h3>
+                <p>Starting from $1400</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
